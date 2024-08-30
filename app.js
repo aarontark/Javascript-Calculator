@@ -10,12 +10,18 @@ let clearBtn = document.querySelector('.clear');
 
 let operands = [''];
 let operator;
+let calculated;
 
 console.log(multiplication);
 console.log(addition);
 
 numbers.forEach((currentNum) => {
     currentNum.addEventListener('click', () => {
+        if (calculated == true) {
+            operands = ['']
+            calculated = false;
+        }
+
         if(operands.length == 1) {
             operands[0] = Number(operands[0] + currentNum.innerHTML);
             display.innerHTML = operands[0];
@@ -120,6 +126,7 @@ equals.addEventListener('click', () => {
         operands = [quotient, ''];
     }
     operator = '';
+    calculated = true;
     console.log(operands);
 })
 
