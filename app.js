@@ -22,11 +22,9 @@ numbers.forEach((currentNum) => {
         if(operands.length == 1) {
             operands[0] = Number(operands[0] + currentNum.innerHTML);
             display.innerHTML = operands[0];
-            console.log(operands);
         } else if (operands.length == 2) {
             operands[operands.length - 1] = Number(operands[operands.length - 1] + currentNum.innerHTML);
             display.innerHTML = operands[operands.length - 1];
-            console.log(operands);
         }
     })
 })
@@ -35,11 +33,9 @@ decimal.addEventListener('click', () => {
     if(operands.length == 1) {
         operands[0] = operands[0] + decimal.innerHTML;
         display.innerHTML = operands[0];
-        console.log(operands);
     } else if (operands.length == 2) {
         operands[operands.length - 1] = operands[operands.length - 1] + decimal.innerHTML;
         display.innerHTML = operands[operands.length - 1];
-        console.log(operands);
     }
 })
 
@@ -146,7 +142,6 @@ equals.addEventListener('click', () => {
     }
     operator = '';
     calculated = true;
-    console.log(operands);
 })
 
 clearBtn.addEventListener('click', () => {
